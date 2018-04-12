@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+}
+
+.box-container {
+    width: 100%;
+    height: 100%;
+    /*position: relative;*/
+    perspective: 500px;
+    /*perspective-origin: center;*/
+    /*display: inline-block;*/
+    padding: 100px;
+    transform-style: preserve-3d;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    /*perspective: 1000px;
+    perspective-origin: center;*/
+    left: 50%;
+    top: 50%;
+    /*margin: auto;*/
+    margin: -100px auto auto -100px;
+    position: absolute;
+    transform-style: preserve-3d;
+}
+
+.side {
+    width: inherit;
+    height: inherit;
+    /*background: blue;*/
+    /*display: block;*/
+    opacity: 0.8;
+    color: white;
+    text-align: center;
+    font-size: 140px;
+    position: absolute;
+    /*border: 2px solid black;*/
+    transform-style: preserve-3d;
+}
+
+.orange {
+    background: orange;
+}
+
+.no-padding {
+    padding: 0px;
+}
+
+.no-margin {
+    margin: 0px;
+}
+
+.front {
+    transform: rotateY(0deg) translateZ(100px);
+}
+
+.back {
+    transform: rotateX(180deg) translateZ(100px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+.wall {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+}
+
+.wall > div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: gray;
+    box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.15);
+}
+
+.wall-top {
+    height: 600px;
+	transform: rotateX(-90deg);
+	transform-origin: 0 0;
+    transform-style: preserve-3d;
+	background-color: red;
+}
+
+.wall-bottom {
+	height: 600px;
+	transform: rotateX(90deg);
+	transform-origin: 0 100%;
+    transform-style: preserve-3d;
+	background: blue;
+	bottom: 0;
+}
+.wall-left {
+	transform: rotateY(90deg);
+	transform-origin: 0 0;
+    transform-style: preserve-3d;
+    background: blue;
+	width: 600px;
+}
+.wall-right {
+	transform: rotateY(-90deg);
+	transform-origin: 100% 0;
+    transform-style: preserve-3d;
+	width: 600px;
+	right: 0;
+}
+.wall-back {
+	transform: translateZ(-300px);
+    transform-style: preserve-3d;
+	background-color: #C7C7C7;
+}
