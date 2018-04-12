@@ -126,3 +126,18 @@ body {
     transform-style: preserve-3d;
 	background-color: #C7C7C7;
 }
+#camDisplay {
+  position: fixed;
+  z-index: 999;
+}
+div.line{
+  transform-origin: 0 400px 0;
+  transform: rotate(50deg);
+  transform-style: preserve-3d;
+  height: 5px; /* Line width of 3 */
+  width: 500px;
+  background: #000; /* Black fill */
+  border-width: thick;
+  z-index: auto;
+  /* transform: skew(20deg, 90deg); */
+}
